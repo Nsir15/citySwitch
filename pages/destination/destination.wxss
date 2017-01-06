@@ -1,0 +1,92 @@
+/* pages/destination/destination.wxss */
+
+Page{
+    background: #f2f4f7;
+}
+.historyView{
+    width:690rpx;
+    display: flex;
+    flex-direction: row;
+}
+.city-view{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 0;
+    max-height: 56rpx;
+    flex: 8;
+    overflow: hidden;
+}
+.history-text{
+    margin-left:14rpx;
+    font-size:28rpx;
+}
+.history{
+    color:#b2b2b2;
+    flex: 2;
+}
+.history-city{
+    color: #353535;
+}
+/*隐藏scroll-view 的滚动条*/
+::-webkit-scrollbar {
+    width: 0;
+    height: 0; 
+    color: transparent; 
+}
+ .tab-item{
+    background: #f2f4f7;
+    color: #000;
+    font-size: 28rpx;
+    height: 92rpx;
+    width: 100%;
+    text-align: center;
+    line-height: 90rpx;
+}
+.active{
+    background: white;
+    color: palegreen;
+}
+
+.topView{
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 164rpx;
+    width: 100%;
+    background: white;
+}
+.initialView{
+    display: flex;
+    flex-direction: row;
+    margin-top: 34rpx;
+    align-items: center;
+}
+.initial{
+    /*background: orange;*/
+    height: 26rpx;
+    font-size: 28rpx;
+    line-height: 26rpx;
+    margin-left: 10rpx;
+}
+.item-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 30rpx;
+    margin-bottom: 66rpx;
+}
+.item{
+    width: 160rpx;
+    height: 70rpx;
+    border: solid 2rpx lightgray;
+    line-height: 60rpx;
+    text-align: center;
+    background: white;
+    font-size: 28rpx;
+    color: #000;
+    margin-right: 24rpx;
+    margin-top: 30rpx;
+}

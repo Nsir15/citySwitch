@@ -1,0 +1,97 @@
+/*右侧索引的样式*/
+.searchLetter{
+    position: fixed;
+    right: 0;
+    width: 30px;
+    font-size: 20rpx;
+    /*height: 100%;*/
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    margin-top: 100rpx;
+}
+.searchLetter view{
+    height: 70rpx;
+}
+.touchClass{
+    background-color: white;
+    color: #03b500;
+}
+.showSlectedLetter{
+    background-color: rgba(0, 0, 0,0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius:10px; 
+    font-size: 26px;
+    z-index: 1
+}
+.selection{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.item_letter{
+    display: flex;
+    background-color:rgb(240, 241, 247);
+    height: 64rpx;
+    padding-left: 10px;
+    align-items: center;
+    color: #888;
+    font-size: 15px;
+}
+/*.item_city{
+    display: flex;
+    background-color: #fff;
+    height: 40px;
+    padding-left: 10px;
+    align-items: center;
+    border-bottom: 1px solid #f8f8f8
+}*/
+
+
+
+
+
+/*这是新加的*/
+.cityList{
+    background: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 690rpx;
+    /*min-height: 100rpx;*/
+    padding-top: 20rpx;
+}
+.item_city{
+    background-color: white;
+    height: 58rpx;
+    width: 150rpx;
+    font-size: 24rpx;
+    text-align: center;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 58rpx;
+    padding: 0rpx;
+    margin-left: 20rpx;
+    margin-bottom: 20rpx;
+    box-sizing: border-box;
+    /*border-radius: 10rpx;*/
+}
+.normal{
+    border: solid 2rpx lightgrey;
+}
+.selectedCity{
+    color: #03b500;
+    border: solid  2rpx #03b500;
+}

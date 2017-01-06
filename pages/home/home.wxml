@@ -1,0 +1,4 @@
+<!--pages/home/home.wxml-->
+<text>{{city}}</text>
+<button catchtap="citySelected">出发城市</button>
+<button catchtap="destination">目的地选择</button>

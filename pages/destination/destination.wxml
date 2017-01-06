@@ -1,0 +1,44 @@
+<!--pages/destination/destination.wxml-->
+<view class="topView">
+     <view class="searchView">
+        <input class="input" placeholder="目的地/关键字" bindinput="searchChange"/>
+     </view>
+     <view class="historyView">
+        <view class="history-text history" wx:if="{{history.length>0}}">历史记录</view>
+        <view class="city-view">
+            <view class="history-text history-city" wx:for="{{history}}" wx:key="{{index}}">{{item}}</view>
+        </view>
+       
+     </view>
+</view>
+
+ <view style="display:flex;flex-direction:row;">
+     <!--左侧导航-->
+    <scroll-view style="flex: 2;height:{{winHeight-searchHeight-10}}px; margin-top:184rpx;width:140rpx;" scroll-y="true">
+        <view class="{{currentIndex == index?'tab-item active':'tab-item'}}"  wx:for="{{destinations}}" wx:for-item="itemName"  wx:key="{{index}}" data-id="{{index}}" catchtap="switchTab"> 
+            {{itemName.destination}}
+        </view>   
+    </scroll-view>
+    <!--右侧城市-->
+     <scroll-view style="flex: 8; background: white;height: {{winHeight-searchHeight-10}}px;margin-top:184rpx;" scroll-y="true">
+        <block wx:for="{{citys}}" wx:key="{{index}}">
+        <!--热门-->
+            <view wx:if="{{item.initial.length>0}}" class="initialView">
+                <view style="height:26rpx;width:6rpx;background:#fc6f48;line-height:26rpx;margin-left:20rpx;"></view>
+                <view class="initial">{{item.initial}}</view>
+            </view>
+            <view class="item-container">
+                <view class="item" wx:for="{{item.items}}" wx:key="{{index}}" wx:for-item="cityName" catchtap="cityClick" data-city="{{cityName}}">
+                    {{cityName}}
+                </view>
+            </view>        
+        </block>
+      </scroll-view>      
+    </view>
+
+
+
+
+
+
+
